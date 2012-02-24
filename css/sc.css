@@ -1,0 +1,340 @@
+body
+{
+    font: normal 10pt Arial, sans-serif;
+}
+
+body, td, form
+{
+    margin: 0;
+    padding: 0;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+.b-sc
+{
+    padding: 6px 4px 0 4px;
+    margin: 2em;
+
+    width: 400px;
+
+    border: solid 1px #ccc;
+    border-radius: 5px;
+
+    background-color: #eee;
+}
+
+.b-sc__playlist
+{
+    position: relative;
+        
+    margin: 5px 0;
+    padding: 5px;
+    
+    background-color: #D2FB86;
+    color: #000;
+}
+
+.b-sc__title,
+.b-sc__desc
+{
+    font: bold 120% Arial, sans-serif;
+    
+    position: relative;
+    
+    display: block;
+    width: 260px;
+    padding: 0 5px;
+    min-height: 26px;
+    line-height: 26px;
+    
+    color: #042;
+    background-color: #A4E245;
+    
+    border-radius: 4px;
+}
+
+.b-sc__desc
+{
+    font: normal 100% Arial, sans-serif;
+    
+    margin-top: 3px;
+}
+
+.b-sc__title-txt,
+.b-sc__desc-txt
+{
+    display: inline-block;
+    width: 237px;
+
+    overflow: hidden;
+}
+
+.b-sc__title-txt
+{
+    white-space: nowrap;
+}
+
+.b-sc__edit-label
+{
+    font: bold 12pt Arial, sans-serif;
+    
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    
+    display: inline-block;
+    padding: 0 5px;
+    margin-left: .65em;
+    
+    color: #042;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 4px;
+    
+    text-shadow: #fff 1px 1px 1px;
+    cursor: pointer;
+}
+
+.b-sc__track
+{
+    position: relative;
+    
+    margin: 5px 0 0 0;
+    padding: 2px;
+    min-height: 40px;
+    
+    background-color: #F1FEDF;
+}
+
+.b-sc__tremove,
+.b-sc__tplay,
+.b-sc__tpause,
+.b-sc__premove,
+.b-sc__pplay,
+.b-sc__ppause
+{
+    position: absolute;
+    top: 50%;
+    
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-top: -13px;
+    
+    border: solid 1px;
+    border-radius: 3px;
+    
+    cursor: pointer;
+}
+
+.b-sc__tremove,
+.b-sc__premove
+{
+    right: 5px;
+    
+    border-color: #f99;
+    color: #900;
+}
+
+.b-sc__premove
+{
+    right: 10px;
+}
+
+.b-sc__tpause,
+.b-sc__tplay,
+.b-sc__ppause,
+.b-sc__pplay
+{
+    border-color: #aaa;
+}
+
+.b-sc__tpause
+{
+    right: 50px;
+}
+
+.b-sc__ppause
+{
+    right: 55px;
+}
+
+.b-sc__tplay
+{
+    right: 83px;
+}
+
+.b-sc__pplay
+{
+    right: 88px;
+}
+
+.b-sc__premove,
+.b-sc__pplay,
+.b-sc__ppause
+{
+    top: 5px;
+    margin: 0;
+}
+
+.b-sc__pplay,
+.b-sc__tplay
+{
+    background: #ddd url(/img/play.png) 50% 50% no-repeat scroll;
+}
+
+.b-sc__ppause,
+.b-sc__tpause
+{
+    background: #ddd url(/img/pause.png) 50% 50% no-repeat scroll;
+}
+
+.b-sc__premove,
+.b-sc__tremove
+{
+    background: #fcb url(/img/remove.png) 50% 50% no-repeat scroll;
+}
+
+.b-sc__track_playing
+{
+    background-color: #FCFF93;
+}
+
+.b-sc__tname,
+.b-sc__tdesc
+{
+    font: bold 85% Arial, sans-serif;
+    
+    width: 270px;
+    height: 20px;
+    overflow: hidden;
+    
+    white-space: nowrap;
+    color: #375;
+}
+
+.b-sc__tdesc
+{
+    font-weight: normal;
+    color: #333;
+}
+
+.b-sc__found
+{
+    position: relative;
+    
+    height: 2em;
+    padding: 5px;
+}
+
+.b-sc__playlist-selector
+{
+    position: absolute;
+    
+    top: 5px;
+    right: 5px;
+    
+    width: 5em;
+    height: 1.3em;
+    padding: 3px;
+}
+
+.b-sc__add-label
+{
+    font: bold 90% Arial, sans-serif;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 5em;
+    height: 1.3em;
+    padding: 3px;
+    
+    background: #7ADEA5;
+    border-radius: 4px;
+    
+    cursor: pointer;
+}
+
+.b-sc__all-playlists
+{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    
+    display: none;
+    margin-top: -2px;
+    margin-right: 6px;
+    
+    color: #000;
+    background-color: #eee;
+    border: solid 1px #666;
+    
+    z-index: 100;
+}
+
+.b-sc__pl
+{
+    min-width: 8em;
+    min-height: 1.5em;
+    max-width: 16em;
+    
+    margin: 0 3px;
+    
+    overflow: hidden;
+    
+    white-space: nowrap;
+    
+    cursor: pointer;
+}
+
+.b-sc__pl:hover
+{
+    background-color: #fff;
+}
+
+.b-sc__title-editor,
+.b-sc__desc-editor
+{
+    display: none;
+    
+    min-height: 26px;
+}
+
+.b-sc__search-query
+{
+    width: 270px;
+}
+
+.b-sc__input
+{
+    width: 180px;
+}
+
+.b-sc__found-title,
+.b-sc__found-time
+{
+    font: normal 85% Arial, sans-serif;
+    width: 275px;
+    
+    overflow: hidden;
+    
+    white-space: nowrap;
+}
+
+.b-sc__found-time
+{
+    color: #666;
+}
+
+.b-sc__controls
+{
+    padding: 5px;
+    margin: 5px 0;
+    
+    background-color: #D2FB86;
+}

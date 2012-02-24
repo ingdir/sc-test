@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SoundCloud Dev Challenge</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="/css/sc.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/sc.js"></script>
+</head>
+<body>
+
+<div class="b-sc">
+    <div>
+        <a href="javascript:window.jQuery&&$.getScript('http://shirshin.com/js/sc-bookmarklet.js');void(0);">I am an SC bookmarklet, drag me to Bookmarks!</a>
+    </div>
+
+    <form class="b-sc__search-form">
+        Search SoundCloud and find something amazing:<br />
+        <input class="b-sc__search-query" /><input type="submit" class="b-sc__search" value="Search" />
+        <div class="b-sc__results"></div>
+    </form>
+
+    <div class="b-sc__controls">
+        <input type="button" class="b-sc__undo" value="Undo Changes"
+        />&nbsp;<input type="button" class="b-sc__volminus" value="Vol −"
+        />&nbsp;<input type="button" class="b-sc__volplus" value="Vol +" />
+    </div>
+
+</div>
+
+<script type="text/html" id="pl">
+<div class="b-sc__pl" data-id="{%= id %}">{%= title %}</div>
+</script>
+
+<script type="text/html" id="found">
+<div class="b-sc__found" data-id="{%= id %}">
+    <div class="b-sc__found-title">{%= title %}</div>
+    <div class="b-sc__found-time">{%= Math.ceil(duration/60000) %} min.</div>
+    <div class="b-sc__playlist-selector">
+        <div class="b-sc__add-label" data-id="label{%= id %}">Add&nbsp;to...</div>
+        <div class="b-sc__all-playlists"></div>
+    </div>
+</div>
+</script>
+
+<script type="text/html" id="playlistContainer">
+<div class="b-sc__playlist-container"></div>
+</script>
+
+<script type="text/html" id="playlist">
+<div class="b-sc__playlist b-sc__playlist_id_{%= id %}" data-id="{%= id %}">
+    <div class="b-sc__title"><span class="b-sc__title-txt">{%= title %}</span><span class="b-sc__edit-label" data-type="title">...</span></div>
+    <form class="b-sc__title-editor" data-type="title">
+        <input class="b-sc__input" />
+        <input class="b-sc__save" type="submit" value="Save" />
+    </form>
+    <div class="b-sc__desc"><span class="b-sc__desc-txt">{%= desc %}</span><span class="b-sc__edit-label" data-type="desc">...</span></div>
+    <form class="b-sc__desc-editor" data-type="desc">
+        <input class="b-sc__input" />
+        <input class="b-sc__save" type="submit" value="Save" />
+    </form>
+    <div class="b-sc__pplay"></div>
+    <div class="b-sc__ppause"></div>
+    <div class="b-sc__tracklist"></div>
+    
+    <div class="b-sc__pplay"></div>
+    <div class="b-sc__ppause"></div>
+    <div class="b-sc__premove"></div>
+</div>
+</script>
+
+<script type="text/html" id="track">
+<div class="b-sc__track b-sc__track_id_{%= id %}" data-id="{%= id %}">
+    <div class="b-sc__tname" title="{%= name %}">{%= name %}</div>
+    <div class="b-sc__tdesc" title="{%= desc %}">{%= desc %}</div>
+    
+    <div class="b-sc__tplay"></div>
+    <div class="b-sc__tpause"></div>
+    <div class="b-sc__tremove"></div>
+</div>
+</script>
+
+
+</body>
+</html>
