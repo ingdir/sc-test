@@ -1,14 +1,4 @@
 ﻿$(function() {
-    
-    // empty wrappers for console.log methods
-    if (window.console === undefined) {
-        window.console = {
-            log: $.noop,
-            dir: $.noop,
-            warn: $.noop
-        };
-    }
-    
     var client_id = '3c392172a12b1eec82784e86ce258959';
     
     // modified version of J.Resig's Microtemplating engine
