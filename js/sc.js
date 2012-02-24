@@ -102,7 +102,7 @@
                 displaySearchResults(data);
                 
                 // surprise! :-)
-                if (reqParams.q.toLowerCase() === '\u006C\u006F\u0076\u0065') {
+                if (reqParams.q && reqParams.q.toLowerCase() === '\u006C\u006F\u0076\u0065') {
                     $this.find('.b-sc__add-label').css({backgroundColor: 'pink', color: 'red'}).text('\u2665 Add to \u2665');
                 }
             });
